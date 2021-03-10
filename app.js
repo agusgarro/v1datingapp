@@ -4,12 +4,13 @@ const express      = require('express');
 const path         = require('path');
 const favicon      = require('serve-favicon');
 const logger       = require('morgan');
+const mongoose     = require('mongoose');
 const cookieParser = require('cookie-parser');
 const bodyParser   = require('body-parser');
-const mongoose     = require('mongoose');
+
 
 mongoose
-  .connect('mongodb://localhost/v1datingapp', { useNewUrlParser: true })
+  .connect(process.env.MONGODB_URI || 'mongodb://localhost/v1datingapp', {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -40,6 +41,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const index = require('./routes/index');
 app.use('/', index);
+
+const events = require ('./routes/events');
+app.use('/api/events', events);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
