@@ -45,6 +45,9 @@ app.use('/', index);
 const events = require ('./routes/events');
 app.use('/api/events', events);
 
+const user = require ('./routes/users');
+app.use ('/api/users', user);
+
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   const err = new Error('Not Found');
