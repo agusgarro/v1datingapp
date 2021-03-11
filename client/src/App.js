@@ -1,24 +1,20 @@
-
+import React from 'react';
 import './App.css';
-import { Route } from "react-router-dom"
-import Events from './components/events/Events'
-import Navbar from './components/Navbar'
-import Homepage from './components/Homepage'
-
+import Navbar from './components/Navbar';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Events />
-     <Route 
-     exact path='/homepage'
-     component={Homepage}
-     />
-    </div>
+    <>
+    <Router>
+
+      <Navbar/>
+      <Switch>
+        <Route path="/" exact />
+      </Switch>
+      </Router>
+    </>
   );
 }
 
 export default App;
-
-
