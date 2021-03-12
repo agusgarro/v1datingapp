@@ -8,7 +8,7 @@ function Navbar() {
         <>
            <nav className="navbar">
                <div className="navbar-container">
-               <Link to="/" className="navbar-logo">
+               <Link to="/mymatches" className="navbar-logo">
                    <img className="logo"
           src={'https://res.cloudinary.com/dzazbwnnx/image/upload/v1615549547/hashedbyte-datingapp%20prototype/perfil-avatar-mujer-icono-redondo_24640-14048_v5zgul.jpg'} 
           alt="calendar-logo">
