@@ -1,3 +1,41 @@
-.navbar-logo {
- width: 10%,  
-}
+.navbar {
+    background: white;
+    color: white;
+    height: 3vh, 2,5 rem;
+    list-style: none;
+    display: flex;
+    
+  
+    align-items: center;
+    justify-content: space-between;
+    float: none;
+  
+  
+    
+    
+   
+  }
+
+  .navbar-logo {
+    list-style: none;
+    flex-wrap:nowrap;
+   
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .logo {
+      width: 5%;
+      align-items: center;
+     
+     
+ 
+  }
+
+  .navbar-container {
+      padding-left: 20% ;
+  }
+
